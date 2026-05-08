@@ -63,7 +63,7 @@ pkill -f "monitor_convoy.py" 2>/dev/null; sleep 0.5
 ```bash
 SKILL_DIR="$(dirname "$0")"
 # または絶対パスで
-SKILL_DIR="/Users/akimuhirai/Desktop/simutrans-busplay/.claude/skills/simutrans-gradual-start"
+SKILL_DIR="$(cd "$(dirname "$0")" && pwd)"  # このスクリプトと同じディレクトリ
 
 python3 "$SKILL_DIR/monitor_convoy.py" \
     <depot_x> <depot_y> "<line_full_name>" \
