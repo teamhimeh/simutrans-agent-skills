@@ -1,8 +1,10 @@
 # simutrans-agent-skills
 
-[Claude Code](https://claude.ai/code) と [Simutrans MCP サーバ](https://github.com/akimuhirai/simutrans-busplay) を使って、Simutrans のゲーム内操作を自然言語で行うためのスキル集です。
+[Simutrans MCP サーバ](https://github.com/teamhimeh/simutrans/wiki/MCP-Server) を使って、Simutrans のゲーム内操作をAIエージェントに行わせるためのskill集です。
 
 ## スキル一覧
+
+随時更新します。
 
 | スキル | 説明 |
 |---|---|
@@ -15,7 +17,7 @@
 
 ## インストール
 
-`skills/` ディレクトリを Claude Code のスキルディレクトリに配置（またはシンボリックリンク）してください。
+Claude Codeの場合: `skills/` ディレクトリを Claude Code のスキルディレクトリに配置（またはシンボリックリンク）してください。
 
 ```
 .claude/skills -> /path/to/simutrans-agent-skills/skills
