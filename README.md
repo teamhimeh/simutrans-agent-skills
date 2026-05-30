@@ -14,6 +14,12 @@
 | `simutrans-transfer-convoys` | 編成を別の路線へ付け替える |
 | `simutrans-start-convoy` | 指定したデポの編成を出庫させる |
 | `simutrans-gradual-start` | デポからの出庫を段階的に行う監視スクリプトを起動する |
+| `simutrans-collect-cargo` | 全路線の乗客カーゴデータを収集しCSVに保存する |
+| `simutrans-rank-transfers` | 乗換需要の多い停留所をランキングし、直通化候補を特定する |
+| `simutrans-transfer-impact` | 新路線を設定した場合の既存路線からの転移旅客数を推定する |
+| `simutrans-detect-backtrack` | 特定の乗換停留所で折り返す「V字経路」旅客を検出する |
+| `simutrans-set-spacing` | 路線の停留所に発車間隔（spacing）とWAIT_FOR_TIMEを設定する |
+| `simutrans-split-line` | 長大路線を進行方向を維持したまま2つに自動分割する |
 
 ## インストール
 
