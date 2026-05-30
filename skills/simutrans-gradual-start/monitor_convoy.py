@@ -127,6 +127,9 @@ def main():
                 ts = time.strftime("%H:%M:%S")
                 if err:
                     print(f"[{ts}] ERROR: {err}", flush=True)
+                    if "no line:" in str(err):
+                        print(f"[{ts}] 路線が見つからないため終了", flush=True)
+                        sys.exit(1)
                 elif result.startswith("SKIP:"):
                     count = result.split(":")[1]
                     print(f"[{ts}] 待機 {count}台 → 出庫不要", flush=True)
@@ -136,6 +139,9 @@ def main():
                 elif result.startswith("EMPTY:"):
                     print(f"[{ts}] 待機 {result.split(':')[1]}台 ≤{threshold} だがデポ空 → 終了", flush=True)
                     sys.exit(0)
+                elif result.startswith("ERROR: no line:"):
+                    print(f"[{ts}] {result} → 終了", flush=True)
+                    sys.exit(1)
                 else:
                     print(f"[{ts}] {result}", flush=True)
                 time.sleep(interval)
